@@ -1,7 +1,7 @@
 <template>
     <div class="block">
-        <Text :colorT="col"/>
-        <p :style="{color: col}">qwerty</p>
+        <Text :colorT="color"/>
+        <button @click="out">pressBlock</button>
     </div>
 </template>
 
@@ -17,7 +17,12 @@
             return {
                 col: this.color
             }
-        }
+        },
+        methods: {
+            out() {
+                console.log(this.col)
+            }
+        },
     }
 </script>
 

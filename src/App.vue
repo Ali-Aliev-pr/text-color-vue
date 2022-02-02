@@ -3,7 +3,7 @@
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   <p :style="{color: color}">Hi</p>
   <Block :color="color"/>
-  <Input/>
+  <Input :colorChanged="updateColor"/>
 </template>
 
 <script>
@@ -22,7 +22,13 @@ export default {
       return {
         color: 'red'
       }
-  }
+  },
+  methods: {
+    updateColor(val) {
+      this.color = val
+      console.log(this.color)
+    }
+  },
 }
 </script>
 

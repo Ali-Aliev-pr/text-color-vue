@@ -1,5 +1,6 @@
 <template>
     <p :style="{color: colorT}" class="text">Text Should change color!</p>
+    <button @click="log">PressText</button>
 </template>
 <script>
     export default {
@@ -9,7 +10,12 @@
             return {
                 colorr: this.colorT
             }
-        }
+        },
+        methods: {
+            log() {
+                console.log(this.colorr)
+            }
+        },
     }
 </script>
 <style>
